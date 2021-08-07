@@ -33,6 +33,9 @@ class WebAuthnCredential extends Model implements PublicKeyCredentialSourceRepos
 {
     use SoftDeletes;
     use ManagesCredentialRepository;
+    
+    protected $connection = 'mysql_secrets';
+
 
     /**
      * The column name for soft-deletes.
